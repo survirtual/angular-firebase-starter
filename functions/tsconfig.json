@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "lib": ["es6"],
+      "module": "commonjs",
+      "noImplicitAny": false,
+      "sourceMap": true,
+      "target": "es5",
+      "moduleResolution": "node",
+      "typeRoots": [
+        "node_modules/@types"
+      ],
+      "baseUrl": ".",
+      "paths": {
+        "~shared/*" : ["../shared/*"], // Typescript shared between server and client
+        "~common/*" : ["./src/common/*"] // Typescript common between different server functions
+      }
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.ts.spec"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
