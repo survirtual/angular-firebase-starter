@@ -5,11 +5,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run generate-sw",
+    "build-prod": "ng build --prod && npm run generate-sw",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-func": "cd functions && npm run deploy"
+    "serve": "npm run build && cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html",
+    "deploy-func": "cd functions && npm run deploy",
+    "generate-sw": "node workbox.service-worker.conf.js"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
+    "workbox-sw": "^2.1.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -42,9 +46,11 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "live-server": "^1.2.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "workbox-cli": "^2.1.0"
   }
 }
