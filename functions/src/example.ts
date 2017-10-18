@@ -5,7 +5,7 @@ import { Authorization, AuthenticatedRequest } from '~common/auth';
 
 import { ExampleShared } from '~shared/example';
 
-export const submitRating = functions.https
+export const exampleFunction = functions.https
 .onRequest((req, res) => {
   Authorization.validateFirebaseIdToken( req, res, () => {
     const user = (<AuthenticatedRequest>req).user;
