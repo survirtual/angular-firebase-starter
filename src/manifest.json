@@ -1,0 +1,30 @@
+{
+  "short_name": "ngFB-Starter",
+  "name": "Angular Firebase PWA Starter",
+  "icons": [
+    {
+      "src": "assets/touch/angular-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/touch/angular-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/touch/angular-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/touch/angular-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
+  "display": "standalone"
+}

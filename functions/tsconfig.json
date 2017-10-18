@@ -10,6 +10,13 @@
         "node_modules/@types"
       ],
       "baseUrl": ".",
+
+      /*
+          Keep in sync with:
+              - webpack.config.js
+                  .resolve
+                  .alias
+      */
       "paths": {
         "~shared/*" : ["../shared/*"], // Typescript shared between server and client
         "~common/*" : ["./src/common/*"] // Typescript common between different server functions

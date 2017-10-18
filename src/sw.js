@@ -1,4 +1,4 @@
-importScripts('./workbox-sw.prod.v2.1.0.js');
+//DO NOT DELETE THIS LINE
 
 const workboxSW = new WorkboxSW();
 workboxSW.precache([]);
